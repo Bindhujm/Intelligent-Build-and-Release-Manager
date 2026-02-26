@@ -1,0 +1,248 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px;
+    color: white;
+    background: radial-gradient(circle at 20% 20%, #1c1a4a, #0f0c29 70%);
+    overflow-x: hidden;
+}
+
+/* =========================================
+   PARTICLE BACKGROUND
+========================================= */
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.particles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #00f5d4;
+    border-radius: 50%;
+    animation: float 15s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   HEADER
+========================================= */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 42px;
+    background: linear-gradient(90deg, #7f5af0, #00f5d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: #cbd5e1;
+    margin-top: 10px;
+}
+
+/* =========================================
+   GLOWING CARD STYLE
+========================================= */
+.card,
+.control-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(28, 26, 74, 0.6);
+    backdrop-filter: blur(20px);
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+/* Animated Glowing Border */
+.card::before,
+.control-card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    background: linear-gradient(270deg, #7f5af0, #00f5d4, #5f2eea, #ff4ecd);
+    background-size: 400% 400%;
+    animation: borderGlow 6s linear infinite;
+    z-index: -1;
+}
+
+@keyframes borderGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =========================================
+   TEXTAREA
+========================================= */
+textarea {
+    width: 100%;
+    height: 140px;
+    padding: 18px;
+    border-radius: 16px;
+    border: none;
+    background: rgba(15,12,41,0.9);
+    color: white;
+    resize: none;
+    outline: none;
+}
+
+textarea:focus {
+    box-shadow: 0 0 15px #7f5af0;
+}
+
+/* =========================================
+   CONTROL SECTION
+========================================= */
+.control-header h3 {
+    font-size: 22px;
+    background: linear-gradient(90deg, #7f5af0, #00f5d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+}
+
+.control-header p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+.control-row {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+select {
+    padding: 13px 18px;
+    border-radius: 14px;
+    border: none;
+    background: rgba(15,12,41,0.9);
+    color: white;
+    min-width: 180px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.primary-btn,
+.action-btn {
+    padding: 14px 28px;
+    border-radius: 16px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Generate */
+.primary-btn {
+    background: linear-gradient(135deg, #7f5af0, #00c6ff);
+}
+
+/* Others */
+.build-btn {
+    background: linear-gradient(135deg, #5f2eea, #00c6ff);
+}
+
+.test-btn {
+    background: linear-gradient(135deg, #9b5de5, #00f5d4);
+}
+
+.deploy-btn {
+    background: linear-gradient(135deg, #ff4ecd, #6c63ff);
+}
+
+.primary-btn:hover,
+.action-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* =========================================
+   ACTION PANEL
+========================================= */
+.action-panel {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   DASHBOARD
+========================================= */
+.dashboard {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.generated-code pre,
+.logs p {
+    background: rgba(15,12,41,0.9);
+    padding: 20px;
+    border-radius: 16px;
+    color: #00f5d4;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+#tsparticles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body {
+    background: transparent;
+}
+
+
+
