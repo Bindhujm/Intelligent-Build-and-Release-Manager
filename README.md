@@ -110,12 +110,7 @@ The project successfully demonstrates:
 
 ## 👤 Author
 
-**Name:** *Your Name*  
-**Department:** *Your Department*  
-**Institution:** *Your College Name*  
+**Name:** *Bindhu J M*  
+**Department:** *CSE*  
+**Institution:** *ACS College of Engineering*  
 
----
-
-## 📜 License
-
-This project is developed for academic purposes under VTU internship guidelines.
